@@ -90,3 +90,15 @@ addButton.addEventListener("mouseover", ()=>{
 addButton.addEventListener("mouseout", ()=>{
     hoverMsg.textContent = "";
 })
+
+
+input.addEventListener("keydown",(event)=>{
+    if(event.key === "Enter") {
+        event.preventDefault();
+        addButton.click();
+        console.log("Enter key pressed, task added");
+    }
+})
+
+let str  = "  1";
+str.trim().length === 0 ? console.log("String is empty or whitespace") : console.log("String has content");
